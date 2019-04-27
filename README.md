@@ -49,3 +49,12 @@ You selected this USER-ID:
 
 Running `gpg --list-secret-keys --keyid-format LONG` shows my newly created key (with others).
 
+# Step 3
+
+Add blackbox to the system through `ZSH` (or your preferred method). I use `zplug` so in my `.zshrc` I added the following line:
+
+```
+zplug "StackExchange/blackbox"
+```
+
+Then I created a new `ZSH` session and installed it.
