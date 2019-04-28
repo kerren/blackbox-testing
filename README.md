@@ -86,3 +86,16 @@ NEXT STEP: You need to manually check these in:
 ```
 
 I then ran `blackbox_register_new_file .env`, which took the `.env` file which I had created and added it to the `.gitignore` and then created a `.env.pgp` which was committed to the repository. This `.env.pgp` is an encrypted file that cannot be opened if you don't have the secret key.
+
+# Step 6
+
+The next step is to add data to the `.env` file, I want to edit files using `sublime-text` so I ran the following line,
+
+```
+EDITOR=subl blackbox_edit .env
+```
+
+You can specify `EDITOR` to equal any editor you use (eg. `vim`, `code`, etc).
+
+Now when you save the file it re-encrypts the file and you can push the data to
+the repository.
