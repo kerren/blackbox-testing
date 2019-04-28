@@ -34,7 +34,7 @@ Please specify how long the key should be valid.
       <n>w = key expires in n weeks
       <n>m = key expires in n months
       <n>y = key expires in n years
-Key is valid for? (0) 
+Key is valid for? (0)
 Key does not expire at all
 Is this correct? (y/N) y
 
@@ -85,4 +85,4 @@ NEXT STEP: You need to manually check these in:
 
 ```
 
-
+I then ran `blackbox_register_new_file .env`, which took the `.env` file which I had created and added it to the `.gitignore` and then created a `.env.pgp` which was committed to the repository. This `.env.pgp` is an encrypted file that cannot be opened if you don't have the secret key.
