@@ -3,3 +3,4 @@
 /.blackbox/secring.gpg
 
 .env
+/.env
