@@ -67,4 +67,6 @@ Now I went into the repository and ran `blackbox_initialize` to start it up. Whe
 git commit -m'INITIALIZE BLACKBOX' .blackbox /home/kerren/src/scratch/blackbox-testing/.gitignore
 ```
 
+# Step 5
 
+Now what I need to do is add the secret file to the repository, in my case I'm going to be using a `.env` file and I'm going to encrypt that so that the data isn't visible to any users on the system unless I've added them as blackbox admins.
