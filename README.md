@@ -99,3 +99,20 @@ You can specify `EDITOR` to equal any editor you use (eg. `vim`, `code`, etc).
 
 Now when you save the file it re-encrypts the file and you can push the data to
 the repository.
+
+# Step 7
+
+We can look at the contents of the file by running `blackbox_cat .env` and you get the following output,
+
+```
+========== PLAINFILE ".env"
+========== Importing keychain: START
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+========== Importing keychain: DONE
+========== EXTRACTING .env
+VERSION=1
+SECRET="You should never be able to see this in plaintext!"
+```
+
+
