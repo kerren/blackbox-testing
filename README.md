@@ -115,4 +115,15 @@ VERSION=1
 SECRET="You should never be able to see this in plaintext!"
 ```
 
+# Step 8
 
+Now when you want to use the file you can run `blackbox_decrypt_file .env` which will create the decrypted version of the file. The output looks as follows,
+
+```
+========== PLAINFILE ".env"
+========== Importing keychain: START
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+========== Importing keychain: DONE
+========== EXTRACTING .env
+```
