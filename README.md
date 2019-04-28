@@ -70,3 +70,19 @@ git commit -m'INITIALIZE BLACKBOX' .blackbox /home/kerren/src/scratch/blackbox-t
 # Step 5
 
 Now what I need to do is add the secret file to the repository, in my case I'm going to be using a `.env` file and I'm going to encrypt that so that the data isn't visible to any users on the system unless I've added them as blackbox admins.
+
+First I need to add myself as an admin to the repository, `blackbox_addadmin kerren@entrostat.com` gives the following output:
+
+```
+gpg: /home/kerren/src/scratch/blackbox-testing/.blackbox/trustdb.gpg: trustdb created
+gpg: key 10DA9C6F20CBCF26: public key "Kerren Ortlepp (My PGP key used for StackExchange/blackbox) <kerren@entrostat.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+
+
+NEXT STEP: You need to manually check these in:
+      git commit -m'NEW ADMIN: kerren@entrostat.com' .blackbox/pubring.kbx .blackbox/trustdb.gpg .blackbox/blackbox-admins.txt
+
+```
+
+
