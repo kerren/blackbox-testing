@@ -58,3 +58,13 @@ zplug "StackExchange/blackbox"
 ```
 
 Then I created a new `ZSH` session and installed it.
+
+# Step 4
+
+Now I went into the repository and ran `blackbox_initialize` to start it up. When I initialised, it said that I needed to manually commit the data in using the following command:
+
+```
+git commit -m'INITIALIZE BLACKBOX' .blackbox /home/kerren/src/scratch/blackbox-testing/.gitignore
+```
+
+
