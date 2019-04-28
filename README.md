@@ -49,7 +49,7 @@ You selected this USER-ID:
 
 Running `gpg --list-secret-keys --keyid-format LONG` shows my newly created key (with others).
 
-# Step 3
+## Step 3
 
 Add blackbox to the system through `ZSH` (or your preferred method). I use `zplug` so in my `.zshrc` I added the following line:
 
@@ -59,7 +59,7 @@ zplug "StackExchange/blackbox"
 
 Then I created a new `ZSH` session and installed it.
 
-# Step 4
+## Step 4
 
 Now I went into the repository and ran `blackbox_initialize` to start it up. When I initialised, it said that I needed to manually commit the data in using the following command:
 
@@ -67,7 +67,7 @@ Now I went into the repository and ran `blackbox_initialize` to start it up. Whe
 git commit -m'INITIALIZE BLACKBOX' .blackbox /home/kerren/src/scratch/blackbox-testing/.gitignore
 ```
 
-# Step 5
+## Step 5
 
 Now what I need to do is add the secret file to the repository, in my case I'm going to be using a `.env` file and I'm going to encrypt that so that the data isn't visible to any users on the system unless I've added them as blackbox admins.
 
@@ -87,7 +87,7 @@ NEXT STEP: You need to manually check these in:
 
 I then ran `blackbox_register_new_file .env`, which took the `.env` file which I had created and added it to the `.gitignore` and then created a `.env.pgp` which was committed to the repository. This `.env.pgp` is an encrypted file that cannot be opened if you don't have the secret key.
 
-# Step 6
+## Step 6
 
 The next step is to add data to the `.env` file, I want to edit files using `vim` so I ran the following line,
 
@@ -100,7 +100,7 @@ You can specify `EDITOR` to equal any editor you use (eg. `vim`, `code`, etc).
 Now when you save the file it re-encrypts the file and you can push the data to
 the repository.
 
-# Step 7
+## Step 7
 
 We can look at the contents of the file by running `blackbox_cat .env` and you get the following output,
 
@@ -115,7 +115,7 @@ VERSION=1
 SECRET="You should never be able to see this in plaintext!"
 ```
 
-# Step 8
+## Step 8
 
 Now when you want to use the file you can run `blackbox_decrypt_file .env` which will create the decrypted version of the file. The output looks as follows,
 
