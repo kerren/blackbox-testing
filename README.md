@@ -89,10 +89,10 @@ I then ran `blackbox_register_new_file .env`, which took the `.env` file which I
 
 # Step 6
 
-The next step is to add data to the `.env` file, I want to edit files using `sublime-text` so I ran the following line,
+The next step is to add data to the `.env` file, I want to edit files using `vim` so I ran the following line,
 
 ```
-EDITOR=subl blackbox_edit .env
+EDITOR=vim blackbox_edit .env
 ```
 
 You can specify `EDITOR` to equal any editor you use (eg. `vim`, `code`, etc).
